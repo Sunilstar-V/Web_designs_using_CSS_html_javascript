@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="module2styles.css">
+<meta charset="utf-8">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Module 2 solution</title>
+<style type="text/css">
+	* {
+  box-sizing: border-box;
+}
+
+h1 {
+	font-size: 27px;
+	font-family: Georgia serif;
+	text-align: center;
+	color: orangered;
+	margin-bottom: 30px;
+}
+
+p {
+	padding: 15px 5px 0px 5px;
+	font-family: Georgia sans-serif;
+	font-size: 16px;
+	position: relative;
+}
+
+.section { 
+	background-color: gray;
+   	border: 2px solid black;
+   	margin-top: 20px; 
+   	margin-right: 20px; 
+   	padding: 3px;
+   	text-align: justify;
+   	position: relative;
+ }
+
+span {
+	font-size: 20px;
+	width: 150px;
+	border: 1px solid black;
+	font-weight: bold;
+	text-align: center;
+	float: right; top :0; right: 0; margin: 0;
+	position: absolute;
+}
+#p1 {
+	background-color: rgb(250, 150, 150);
+	
+}
+#p2 {
+	background-color: rgb(250, 0, 0);
+	
+}
+#p3 {
+	background-color: rgb(200, 200, 100);
+	
+}
+}
+
+.row {
+	width: 100%;
+}
+
+@media (min-width: 992px) {
+ 
+  .col-lg-4 {
+    width: 33.33%;
+    float: left;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+ 
+  .col-md-6 {
+    width: 50%;
+    float: left;
+  }
+  .col-md-12 {
+    width: 100%;
+    float: left;
+  }
+}
+
+@media (max-width: 767px)  {
+  
+  .col-sx-12 {
+  	float: left;
+    width: 100%;
+  }
+}
+</style>
+
+</head>
+<body>
+<h1>Our Menu</h1>
+<div class='row'>
+	<div class='col-lg-4 col-md-6 sx-12'>
+		<div class='section'>
+			<span id='p1'>Chicken</span>
+				<p>lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows viewers to focus on graphic aspects such as font, typography, and page layout without being distracted by the content.</p>
+		</div>
+	</div>
+	<div class='col-lg-4 col-md-6 sx-12'>
+		<div class='section'>
+			<span id='p2'>Beef</span>
+				<p>lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows viewers to focus on graphic aspects such as font, typography, and page layout without being distracted by the content.</p>
+		</div>
+	</div>
+	<div class='col-lg-4 col-md-12 sx-12'>
+		<div class='section'>
+			<span id='p3'>Sushi</span>
+				<p>lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows viewers to focus on graphic aspects such as font, typography, and page layout without being distracted by the content.</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
