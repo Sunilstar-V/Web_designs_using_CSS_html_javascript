@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
       /* elements position */
-      #search-form {
+      #search_form {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -33,7 +33,7 @@
 
     <style>
     /* position \of elements */
-    #search-form {
+    #search_form {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -64,7 +64,7 @@
   </head>
   <body>
     <h1>Wikipedia Voice Search</h1>
-    <form id="search-form" action="https://en.wikipedia.org/w/index.php">
+    <form id="search_form" action="https://en.wikipedia.org/w/index.php">
       <div>
         <input type="hidden" name="title" value="Special:Search">
         <input type="text" name="search" id="search_bar" placeholder="Search Wikipedia...">
@@ -75,7 +75,7 @@
       </div>
     </form>
     <script>
-      const searchForm = document.getElementById('search-form');
+      const searchForm = document.getElementById('search_form');
       const searchInput = document.getElementById('search_bar');
       const voiceSearchButton = document.getElementById('voice_search');
       
