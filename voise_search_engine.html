@@ -2,17 +2,19 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Wikipedia Voice Search</title>
+    <title>Wikipedia Voice Search tool</title>
+    <a href="UTF-8">Search using your voice command.
+    Tap to voice search button to starck asking query</a>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-      /* position the search and voice search elements */
+      /* elements position */
       #search-form {
         display: flex;
         align-items: center;
         justify-content: center;
       }
       
-      #search-bar {
+      #search_bar {
         margin-right: 5px;
         padding: 5px;
         font-size: 18px;
@@ -20,7 +22,7 @@
         border-radius: 5px;
       }
       
-      #voice-search-button {
+      #voice_search {
         font-size: 24px;
         background-color: white;
         border: none;
@@ -30,14 +32,14 @@
     </style>
 
     <style>
-    /* position the search and voice search elements */
+    /* position \of elements */
     #search-form {
       display: flex;
       align-items: center;
       justify-content: center;
     }
     
-    #search-bar {
+    #search_bar {
       margin-right: 5px;
       padding: 5px;
       font-size: 18px;
@@ -47,13 +49,13 @@
       border: none;
     }
     
-    #voice-search-button {
+    #voice_search {
       font-size: 24px;
-      background-color: #2196F3;
+      background-color: #00050A;
       border: none;
       border-radius: 5px;
       color: white;
-      padding: 10px;
+      padding: 5px;
       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
       outline: none;
       cursor: pointer;
@@ -65,36 +67,36 @@
     <form id="search-form" action="https://en.wikipedia.org/w/index.php">
       <div>
         <input type="hidden" name="title" value="Special:Search">
-        <input type="text" name="search" id="search-bar" placeholder="Search Wikipedia...">
+        <input type="text" name="search" id="search_bar" placeholder="Search Wikipedia...">
         <button type="submit">Search</button>
       </div>
       <div>
-        <button type="button" id="voice-search-button">&#128266;</button>
+        <button type="button" id="voice_search">&#128266;</button>
       </div>
     </form>
     <script>
       const searchForm = document.getElementById('search-form');
-      const searchInput = document.getElementById('search-bar');
-      const voiceSearchButton = document.getElementById('voice-search-button');
+      const searchInput = document.getElementById('search_bar');
+      const voiceSearchButton = document.getElementById('voice_search');
       
-      // create a new instance of the SpeechRecognition API
+      // create an instance for speeech recognition 
       const recognition = new webkitSpeechRecognition();
       recognition.continuous = false;
       recognition.interimResults = false;
       
-      // when the user clicks the voice search button, start listening for speech input
+      // taking input using voice
       voiceSearchButton.addEventListener('click', () => {
         recognition.start();
       });
       
-      // when the speech recognition engine returns a result, populate the search box with the transcribed text
+      // text of the asked query
       recognition.addEventListener('result', (event) => {
         const transcript = event.results[0][0].transcript;
         searchInput.value = transcript;
         searchForm.submit();
       });
       
-      // if there's an error with speech recognition, log it to the console
+      // error place
       recognition.addEventListener('error', (event) => {
         console.log(event.error);
       });
